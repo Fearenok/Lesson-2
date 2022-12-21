@@ -1,17 +1,22 @@
-# 5.Реализуйте алгоритм перемешивания списка. 
-# Без функции shuffle из модуля random.
+# 5.Реализуйте алгоритм перемешивания списка.
 
-from random import randrange
+from random import randint
 
-num = int(input())
-nums_list = list(range(num))
-len_list = len(nums_list)
 
-print(nums_list)
+def list(n):
+    list = []
+    for i in range(n):
+        list.append(randint(-n, n))
+    return list
 
-for i in range(len_list):
-    n_1 = randrange(len_list)
-    n_2 = randrange(len_list)
-    nums_list[n_1], nums_list[n_2] = nums_list[n_2], nums_list[n_1]
 
-print(nums_list)
+n = int(input('Введите число чтобы указать число элементов: '))
+numbers = list(n)
+print(numbers)
+for i in range(len(numbers)):
+    random_num = randint(i, n-1)
+    temp = numbers[i]
+    numbers[i] = numbers[random_num]
+    numbers[random_num] = temp
+
+print(numbers)

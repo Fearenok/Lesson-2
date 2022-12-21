@@ -1,8 +1,8 @@
-# 2. Напишите программу, которая принимает на вход число N 
+# 2. Напишите программу, которая принимает на вход число N
 # и выдает набор произведений чисел от 1 до N.
 
 n = int(input('input N: '))
 factorial = 1
 for i in range(1, n + 1):
-     factorial *= i
-     print(factorial, end = ' ')
+    factorial *= i
+    print(factorial, end=' ')
